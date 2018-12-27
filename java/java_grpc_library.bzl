@@ -6,12 +6,14 @@ def java_grpc_library(**kwargs):
     visibility = kwargs.get("visibility")
 
     name_pb = name + "_pb"
+    print('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
     java_grpc_compile(
         name = name_pb,
         deps = deps,
         transitive = True,
         visibility = visibility,
     )
+    print('bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb')
     native.java_library(
         name = name,
         srcs = [name_pb],
@@ -21,3 +23,4 @@ def java_grpc_library(**kwargs):
         ],
         visibility = visibility,
     )
+    print('ccccccccccccccccccccccccccccccccccc')
