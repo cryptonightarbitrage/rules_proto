@@ -7,6 +7,7 @@ def java_grpc_library(**kwargs):
 
     name_pb = name + "_pb"
     print('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+    print(kwargs)
     java_grpc_compile(
         name = name_pb,
         deps = deps,
